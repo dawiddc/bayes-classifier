@@ -80,7 +80,7 @@ class NaiveBayesGaussian:
             stand_deviations = []
             values = np.array(self.featureClassDict.get(key))
             self.classes.append(key)
-            for lingie in values.T:
+            for line in values.T:
                 means.append(mean(line))
                 stand_deviations.append(stand_deviation(line))
             self.mean_coef[key] = means
